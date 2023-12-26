@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.css';
 import { ProductCardProps } from './ProductCard.props';
 import { MouseEvent } from 'react';
@@ -15,7 +14,7 @@ function ProductCard(props: ProductCardProps) {
   };
 
   return (
-    <Link to={`/product/${props.id}`} className={styles['link']}>
+    <div className={styles['link']}>
       <div className={styles['card']}>
         <div
           className={styles['head']}
@@ -38,7 +37,7 @@ function ProductCard(props: ProductCardProps) {
           <div className={styles['description']}>{props.description}</div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 
